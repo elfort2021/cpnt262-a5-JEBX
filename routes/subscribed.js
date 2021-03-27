@@ -18,7 +18,10 @@ router.post('/', (req, res) => {
       res.send('<p>Problem subscribing! <a href="/">Please try again</a>.</p>')
     }
     // res.send('<p>Thank you for subscribing! <a href="/">View subscriber list</a>.</p>')
-    res.render('pages/subscribed');
+    res.render('pages/subscribed', {
+      pageTitle: `Subscribed`,
+      user: data
+    });
   })
 })
 
