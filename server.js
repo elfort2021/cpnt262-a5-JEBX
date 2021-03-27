@@ -5,7 +5,11 @@ const express = require('express')
 const apiS = require('./routes/api/apiSubscribers')
 const index = require('./routes/index')
 const sub = require('./routes/subscribed')
-// const team = require('./routes/team')
+
+//Xia Lin
+const apiM = require('./routes/api/apiMember')
+const members = require('./routes/members')
+
 // const admin = require('./routes/admin')
 // const gallery = require('./routes/gallery')
 
@@ -17,7 +21,10 @@ app.use(express.static('./public'))
 
 app.use('/api/v0', apiS)
 app.use('/subscribed', sub)
-// app.use('/team', team)
+
+//Xia Lin
+app.use('/api/v0', apiM)
+app.use('/members',members)
 
 app.use('/', index)
 

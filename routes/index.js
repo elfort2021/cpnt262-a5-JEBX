@@ -15,9 +15,6 @@ router.get('/subscribe', (req, res) => {
   res.render('pages/subscribe', {pageTitle: "Subscribe"})
 })
 
-router.get('/team', (req, res) => {
-  res.render('pages/team', {pageTitle: "Team Members"})
-})
 
 router.get('/admin', (req, res) => {
   res.render('pages/admin', {pageTitle: "Subscribers List"})

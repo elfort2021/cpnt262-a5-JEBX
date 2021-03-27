@@ -1,0 +1,71 @@
+/* resets */
+* {
+  box-sizing: border-box;
+	margin: 0 auto;
+}
+/* font Setting */
+
+h1 {
+  text-align: center;
+  margin-top: 20vh;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  color: white;
+}
+
+h3 {
+font-size: 1.8em;
+}
+
+h4 {
+font-size: 1.5em;
+}
+
+a {
+  display: block;
+
+  font-size: 1.5em;
+  color: white;
+
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+
+/*layout the images responsively*/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-content: center;
+}
+
+figure {
+  text-align: center;
+  display: inline-block;
+  margin-top: 5vh;
+  margin-left: 10vw;
+  line-height: 3vh;
+}
+
+
+figure > figcaption {
+  padding: 0.5em;
+  background-color: orange;
+  border: 1px solid red;
+  height: 250px;
+}
+
+a:hover {
+  color:black;
+}
+
+a:active{
+  color: red;
+}
