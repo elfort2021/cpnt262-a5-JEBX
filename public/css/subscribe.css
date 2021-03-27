@@ -22,7 +22,7 @@ input {
 button {
   border:0;
   outline:none;
-  border-radius:0;
+  border-radius:5px;
   padding:15px 0;
   font-size:2rem;
   text-transform:uppercase;
@@ -31,5 +31,10 @@ button {
 
   display:block;
   width:100%;
+}
+
+button:hover{
+  color:#000000;
+  background-color: darkgrey;
 }
 
