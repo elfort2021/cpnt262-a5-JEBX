@@ -2,7 +2,6 @@ form {
   padding: 40px;
   max-width:600px;
   margin:40px auto;
-  border-radius:4px;
 }
 
 legend {
@@ -38,3 +37,15 @@ button:hover{
   background-color: darkgrey;
 }
 
+.subscribed {
+  padding: 40px;
+  max-width:600px;
+  margin:40px auto;
+
+  display: block;
+}
+
+.subscribed h1, p {
+  text-align: center;
+  margin: 0;
+}
