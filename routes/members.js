@@ -1,9 +1,15 @@
 const express = require('express');
+const router = express.Router()
 const Member = require('../models/member');
 
-const router = express.Router();
+const config = require('../config');
+router.use((req, res, next) => {
+  res.locals = config
+  next()
+})
 
-//display all products
+
+//display all members
 
 router.get('/', (request, response) => {
 
