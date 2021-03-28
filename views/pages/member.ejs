@@ -4,17 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%- pageTitle %></title>
+  
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/member.css">
 
   <script src="js/member.js" type="module"></script>
+  <%- include('../partials/head') %>
 </head>
 
 <body>
-  <h1>Team Members</h1>
+  <%- include('../partials/header') %>
+  <h1 class="member">Team Members</h1>
   
   <main class="gallery">
 
   </main>
+  <%- include('../partials/footer') %>
 </body>
 
 </html>
