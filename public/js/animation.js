@@ -30,4 +30,4 @@ TweenMax.to('.svg', .9, {
   rotation:360, 
   duration: 3.5,
   transformOrigin:'center' 
-}); 
+});
