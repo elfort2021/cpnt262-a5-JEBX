@@ -1,15 +1,17 @@
 const express = require('express')
 const router = express.Router()
 const Subscriber = require('../models/subscriber');
+const config = require('../config')
 // const bodyParser = require("body-parser")
 // const slugify = require('slugify')
 
 
 router.use(express.urlencoded({ extended: true }));
 
-// router.get('/', (req, res) => {
-//   res.redirect('/')
-// })
+router.use((req, res, next) => {
+  res.locals = config
+  next()
+})
 
 router.post('/', (req, res) => {
   const subscriber = new Subscriber(req.body) 

@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Subscribe</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="css/subscribe.css">
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/subscribe.css">
     <script src="js/subscribers.js" defer></script>
   </head>
   <body>
@@ -15,8 +11,6 @@
       <h1 class = "sub-list-title">Current Subscribers:</h1>
       <div class= "sub-list"></div>
     </main>
-    <footer>
-
-    </footer>
+    <%- include('../partials/footer') %>
   </body>
 </html>
