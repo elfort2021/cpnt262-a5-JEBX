@@ -14,16 +14,20 @@
 //   repeatRefresh: 
 //  })
 
-// Push svg to bottom right 
+
+
+// Push svg down
 gsap.to('.svg', {
-  duration: 1.5, 
-  x: 300, 
-  y: 100,
-  scale: 2, 
+  duration: 2.5, 
+  
+  y: 175,
+  scale: 3, 
   ease: 'bounce'
 })
-// rotate SVG on load 
+// rotate SVG on reveal
 TweenMax.to('.svg', .9, {
+  
   rotation:360, 
+  duration: 3.5,
   transformOrigin:'center' 
-}); 
+});
