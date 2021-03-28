@@ -28,9 +28,11 @@ app.use('/members',members)
 
 app.use('/', index)
 
-app.use((req, res) => {
-  res.sendStatus(404);
-})
+app.use(function(req, res) {
+  res.status(404);
+  res.render('pages/404', {pageTitle: "404 Page"});
+});
+
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, ()=>{
