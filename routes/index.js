@@ -20,7 +20,7 @@ router.get('/admin', (req, res) => {
 })
 
 router.get('/gallery', (req, res) => {
-  res.render('pages/gallery', {pageTitle: "Gallery"})
+  res.render('pages/recipegen', {pageTitle: "Recipe Generator"})
 })
 
 module.exports = router;
