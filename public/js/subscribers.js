@@ -14,7 +14,7 @@ fetch('./api/v0/subscribers')
       output += `<dt>${subscriber.name}</dt>
                  <dd>${subscriber.email}</dd>`;
     })
-    document.querySelector('.container').innerHTML = output;
+    document.querySelector('.sub-list').innerHTML = output;
   })
   .catch(function(err){
     // An error or `reject` from any of the above `.then()` blocks will end up here.
