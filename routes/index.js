@@ -20,11 +20,11 @@ router.get('/admin', (req, res) => {
   res.render('pages/admin', {pageTitle: "Subscribers List"})
 })
 
-router.get('/gallery', (req, res) => {
+router.get('/recipegenerator', (req, res) => {
   res.render('pages/recipegen', {pageTitle: "Recipe Generator"})
 })
 
-router.get('/gallery/:id', (req, res) => {
+router.get('/recipegenerator/:id', (req, res) => {
   // use findOne() to find the 'id' in url
   Recipe.findOne({id: req.params.id}, (err, item) => {        
     let image = item;

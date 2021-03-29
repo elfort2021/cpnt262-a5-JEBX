@@ -3,62 +3,175 @@
 <head>
   <%- include ("../partials/head") %>
   <link rel="stylesheet" href="css/recipegen.css">
-  <script src="js/recipegen.js"></script>
 </head>
 
 <body>
   <%- include ("../partials/header") %>
 
   <main>
-    <h1>Recipe Generator</h1>
+
+    <button id="recgen">Try your luck?</button>
 
     <div class="recipegrid">
-      <div class="cover">
-        <img src="images/placeholder.png" class="reveal" alt="serving cover">
-      </div>
-      <div class="cover">
-        <img src="images/placeholder.png" class="reveal" alt="serving cover">
-      </div>
-      <div class="cover">
-        <img src="images/placeholder.png" class="reveal" alt="serving cover">
-      </div>
-      <div class="cover">
-        <img src="images/placeholder.png" class="reveal" alt="serving cover">
-      </div>
-  
-      <figure>
-        <img class="fruit" src="/" alt="">
 
-      </figure>
-      <figure>
-        <img  class="dairy" src="/" alt="">
-
-      </figure>
-      <figure >
-        <img class="protein" src="/" alt="">
-
-      </figure>
-      <figure >
-        <img class="grain" src="/" alt="">
-
-      </figure>
     </div>
 
     <div class="recipe">
-    <h2></h2>
     </div>
-
-
-    <div class="svg-container">
-      <div class="svg">
-
-      </div>
-    </div>
-  <button onclick="outputAll();">Hewwo</button>
 
   </main>
 
   <%- include ("../partials/footer") %>
 </body>
 
+<script>
+  const ingredients =
+  [{
+    id: 1,
+    ingr: "Durian",
+    imgSrc: `durian.svg`,
+    titleTrait: "Yellow",
+    width: 500,
+    height: 500
+  },
+  {
+    id: 2,
+    ingr: "Papaya",
+    imgSrc: `papaya.svg`,
+    titleTrait: "Orange",
+    width: 500,
+    height: 500
+  },
+  {
+    id: 3,
+    ingr: "Kiwi",
+    imgSrc: `kiwi.svg`,
+    titleTrait: "Brown",
+    width: 500,
+    height: 500
+  },
+  {
+    id: 4,
+    ingr: "Blue Cheese",
+    imgSrc: `bluecheese.svg`,
+    titleTrait: "Blue",
+    width: 500,
+    height: 500
+  },
+  {
+    id: 5,
+    ingr: "Chunky Buttermilk",
+    imgSrc: `chunkybuttermilk.svg`,
+    titleTrait: "Chunky",
+    width: 500,
+    height: 500
+  },  {
+    id: 6,
+    ingr: "Unsalted Butter",
+    imgSrc: `unsaltedbutter.svg`,
+    titleTrait: "Unsalted",
+    width: 500,
+    height: 500
+  },  {
+    id: 7,
+    ingr: "Surströmming",
+    imgSrc: `surstromming.svg`,
+    titleTrait: "Surströmming",
+    width: 500,
+    height: 500
+  },  {
+    id: 8,
+    ingr: "Preserved Egg",
+    imgSrc: `preservedegg.svg`,
+    titleTrait: "Preserved Egg",
+    width: 500,
+    height: 500
+  },  {
+    id: 9,
+    ingr: "Kiviak",
+    imgSrc: `kiviak.svg`,
+    titleTrait: "Kiviak",
+    width: 500,
+    height: 500
+  },  {
+    id: 10,
+    ingr: "Instant Noodles",
+    imgSrc: `instantnoodles.svg`,
+    titleTrait: "Ramen",
+    width: 500,
+    height: 500
+  },  {
+    id: 11,
+    ingr: "Cornmeal",
+    imgSrc: `cornmeal.svg`,
+    titleTrait: "Cornbread",
+    width: 500,
+    height: 500
+  },  {
+    id: 12,
+    ingr: "Pretzels",
+    imgSrc: `pretzels.svg`,
+    titleTrait: "Party Mix",
+    width: 500,
+    height: 500
+  },  {
+    id: 13,
+    ingr: `Serving Cover`,
+    imgSrc: `plate.svg`
+  }
+]
+
+document.getElementById("recgen").addEventListener("click", function() {
+  let outputRecipeAnimation = "";
+    let outputRecipeTitle = "";
+    // where the outputs respectively will go
+    const recipeAnimationGrid = document.querySelector(".recipegrid");
+    const recipeTitle = document.querySelector(".recipe");
+
+    const fruit = ingredients[Math.floor(Math.random() * 3)];
+    const dairy = ingredients[Math.floor(Math.random() * 3) + 3];
+    const protein = ingredients[Math.floor(Math.random() * 3) + 6];
+    const grain = ingredients[Math.floor(Math.random() * 3) + 9];
+    const plate = ingredients[12].imgSrc;
+
+
+
+  outputRecipeAnimation =
+        `
+    <div class="cover">
+      <img src="/images/${plate}" class="hidden one" alt="serving cover">
+    </div>
+    <div class="cover">
+      <img src="/images/${plate}" class="hidden two" alt="serving cover">
+    </div>
+    <div class="cover">
+      <img src="images/${plate}" class="hidden three" alt="serving cover">
+    </div>
+    <div class="cover">
+      <img src="images/${plate}" class="hidden four" alt="serving cover">
+    </div>
+    <figure>
+      <a href="/recipegenerator/${fruit.id}"> <figcaption>${fruit.ingr}</figcaption></a>
+      <img src="images/${fruit.imgSrc}" class="fruit" alt="${fruit.ingr}">
+    </figure>
+    <figure>
+      <a href="/recipegenerator/${dairy.id}"><figcaption>${dairy.ingr}</figcaption></a>
+      <img src="images/${dairy.imgSrc}" class="dairy" alt="${dairy.ingr}">
+    </figure>
+    <figure>
+      <a href="/recipegenerator/${protein.id}">  <figcaption>${protein.ingr}</figcaption></a>
+    <img src="images/${protein.imgSrc}" class="protein" alt="${protein.ingr}">
+    </figure>
+    <figure>
+      <a href="/recipegenerator/${grain.id}"> <figcaption>${grain.ingr}</figcaption></a>
+     <img src="images/${grain.imgSrc}" class="grain" alt="${grain.ingr}">
+    </figure>
+    `
+      outputRecipeTitle =
+        `<h2>The ${fruit.titleTrait} ${dairy.titleTrait} ${protein.titleTrait} ${grain.titleTrait}</h2>`
+    
+    recipeAnimationGrid.innerHTML = outputRecipeAnimation;
+    recipeTitle.innerHTML = outputRecipeTitle;
+  })
+  </script>
 </html>
