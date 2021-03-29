@@ -35,18 +35,22 @@ fetch("/api/recipegen")
       <img src="images/" class="reveal" alt="serving cover">
     </div>
 
-    <div class="fruit">
+    <figure class="fruit">
       <img src="images/${fruit.imgSrc}" alt="${fruit.ingr}">
-    </div>
-    <div class="dairy">
+      <figcaption>${fruit.ingr}</figcaption>
+    </figure>
+    <figure class="dairy">
       <img src="images/${dairy.imgSrc}" alt="${dairy.ingr}">
-    </div>
-    <div class="protein">
+      <figcaption>${dairy.ingr}</figcaption>
+    </figure>
+    <figure class="protein">
       <img src="images/${protein.imgSrc}" alt="${protein.ingr}">
-    </div>
-    <div class="grain">
+      <figcaption>="${protein.ingr}</figcaption>
+    </figure>
+    <figure class="grain">
       <img src="images/${grain.imgSrc}" alt="${grain.ingr}">
-    </div>
+      <figcaption>${grain.ingr}</figcaption>
+    </figure>
     `
     outputRecipeTitle +=
       `<h2>The ${fruit.titleTrait} ${dairy.titleTrait} ${protein.titleTrait} ${grain.titleTrait}</h2>`
