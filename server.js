@@ -28,6 +28,18 @@ app.use('/members',members)
 
 app.use('/', index)
 
+app.use(function(err, req, res, next){
+  res.sendStatus(500);
+  res.render('/500');
+});
+
+process.on('uncaughtException', function (err) {
+  console.log('-------------------------- Caught exception: ' + err);
+    app.use(function(err, req, res, next){
+        res.render('/500');
+    });
+});
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT, ()=>{
   console.log('Listening on port: ' + PORT)
