@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <%- include ("../partials/head") %>
+  <link rel="stylesheet" href="css/recipegen.css">
   <script src="js/recipegen.js"></script>
-  <script src="js/animation.js"></script>
 </head>
 
 <body>
@@ -13,16 +13,45 @@
     <h1>Recipe Generator</h1>
 
     <div class="recipegrid">
+      <div class="cover">
+        <img src="${}" class="reveal" alt="serving cover">
+      </div>
+      <div class="cover">
+        <img src="images/plate.svg" class="reveal" alt="serving cover">
+      </div>
+      <div class="cover">
+        <img src="images/plate.svg" class="reveal" alt="serving cover">
+      </div>
+      <div class="cover">
+        <img src="images/plate.svg" class="reveal" alt="serving cover">
+      </div>
+  
+      <figure >
+        <img class="fruit" src="/" alt="">
 
+      </figure>
+      <figure>
+        <img  class="dairy" src="/" alt="">
+
+      </figure>
+      <figure >
+        <img class="protein" src="/" alt="">
+
+      </figure>
+      <figure >
+        <img class="grain" src="/" alt="">
+
+      </figure>
     </div>
 
     <div class="recipe">
-      
+    <h2></h2>
     </div>
 
 
     <div class="svg-container">
       <div class="svg">
+
       </div>
     </div>
   <button onclick="outputAll();">Hewwo</button>
@@ -30,8 +59,6 @@
   </main>
 
   <%- include ("../partials/footer") %>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 </body>
 
 </html>
