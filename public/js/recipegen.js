@@ -10,10 +10,10 @@ fetch('/api/v0/recipegenerator')
   .then(function (ingredients) {
 
     function outputAll() {
-    let fruit = ingredients[Math.floor(Math.random() * 3) + 1];
-    let dairy = ingredients[Math.floor(Math.random() * 3) + 4];
-    let protein = ingredients[Math.floor(Math.random() * 3) + 7];
-    let grain = ingredients[Math.floor(Math.random() * 3) + 10];
+    const fruit = ingredients[Math.floor(Math.random() * 3) + 1];
+    const dairy = ingredients[Math.floor(Math.random() * 3) + 4];
+    const protein = ingredients[Math.floor(Math.random() * 3) + 7];
+    const grain = ingredients[Math.floor(Math.random() * 3) + 10];
 
     // // two outputs: one for the greensock ingredients and another for the recipe text
     // let outputRecipeAnimation = "";

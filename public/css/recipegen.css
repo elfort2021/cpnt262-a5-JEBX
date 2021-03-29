@@ -5,11 +5,16 @@
   grid-template-rows: 100%;
 }
 
-.cover img {
+.cover {
   max-width: 50%;
+  grid-row: 1 / 2;
 }
 
 img .reveal {
+  grid-row: 1 / 2;
+}
+
+figure {
   grid-row: 1 / 2;
 }
 
