@@ -89,6 +89,6 @@ module.exports = [{
   },  {
     id: 13,
     ingr: "Serving Cover",
-    imgSrc: "servingcover.svg"
+    imgSrc: "plate.svg"
   }
 ]
