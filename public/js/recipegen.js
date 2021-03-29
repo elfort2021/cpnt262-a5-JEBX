@@ -7,32 +7,34 @@ fetch("/api/v0/recipegenerator")
     }
     return response.json();
   })
+
   .then(function (ingredients) {
+    function outputAll() {
     // two outputs: one for the greensock ingredients and another for the recipe text
     let outputRecipeAnimation = "";
     let outputRecipeTitle = "";
     // where the outputs respectively will go
     const recipeAnimationGrid = document.querySelector(".recipegrid");
-    const recipeInstructions = document.querySelector(".recipe");
+    const recipeTitle = document.querySelector(".recipe");
 
-    const fruit = ingredients[Math.floor(Math.random() * 3) + 1];
-    const dairy = ingredients[Math.floor(Math.random() * 3) + 4];
-    const protein = ingredients[Math.floor(Math.random() * 3) + 7];
-    const grain = ingredients[Math.floor(Math.random() * 3) + 10];
+  const fruit = ingredients[Math.floor(Math.random() * 3) + 1];
+  const dairy = ingredients[Math.floor(Math.random() * 3) + 4];
+  const protein = ingredients[Math.floor(Math.random() * 3) + 7];
+  const grain = ingredients[Math.floor(Math.random() * 3) + 10];
 
-    outputRecipeAnimation +=
-    `
+      outputRecipeAnimation +=
+        `
     <div class="cover">
-      <img src="images/" class="reveal" alt="serving cover">
+      <img src="images/plate.svg" class="reveal" alt="serving cover">
     </div>
     <div class="cover">
-      <img src="images/" class="reveal" alt="serving cover">
+      <img src="images/plate.svg" class="reveal" alt="serving cover">
     </div>
     <div class="cover">
-      <img src="images/" class="reveal" alt="serving cover">
+      <img src="images/plate.svg" class="reveal" alt="serving cover">
     </div>
     <div class="cover">
-      <img src="images/" class="reveal" alt="serving cover">
+      <img src="images/plate.svg" class="reveal" alt="serving cover">
     </div>
 
     <figure class="fruit">
@@ -52,9 +54,12 @@ fetch("/api/v0/recipegenerator")
       <figcaption>${grain.ingr}</figcaption>
     </figure>
     `
-    outputRecipeTitle +=
-      `<h2>The ${fruit.titleTrait} ${dairy.titleTrait} ${protein.titleTrait} ${grain.titleTrait}</h2>`
-  })
-  .catch(function(error) {
+      outputRecipeTitle +=
+        `<h2>The ${fruit.titleTrait} ${dairy.titleTrait} ${protein.titleTrait} ${grain.titleTrait}</h2>`
+    
+    recipeAnimationGrid.innerHTML = outputRecipeAnimation;
+    recipeTitle.innerHTML = outputRecipeTitle;
+  }}
+  .catch(function (error) {
     console.log(error);
-  })
+  }));
