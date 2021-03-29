@@ -10,6 +10,10 @@ const sub = require('./routes/subscribed')
 const apiM = require('./routes/api/apiMember')
 const members = require('./routes/members')
 
+// Recipe Generator
+const apiRecipeGen = require("./routes/api/apiIngr")
+const recipe =  require("./routes/reciperoute")
+
 // const admin = require('./routes/admin')
 // const gallery = require('./routes/gallery')
 
@@ -25,6 +29,10 @@ app.use('/subscribed', sub)
 //Xia Lin
 app.use('/api/v0', apiM)
 app.use('/members',members)
+
+// Recipe Generator
+app.use("/api/v0", apiRecipeGen)
+app.use("/recipegenerator", recipe)
 
 app.use('/', index)
 

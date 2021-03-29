@@ -1,6 +1,6 @@
 // TO DO: integrate or reconcile with animation.js
 // 1-3=fruits 4-6=dairy 7-9=proteins 10-12=grains
-fetch("/api/recipegen")
+fetch("/api/v0/recipegenerator")
   .then(function (response) {
     if (!response.ok) {
       throw new Error("Invalid response");
