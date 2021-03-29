@@ -14,7 +14,11 @@
 //   repeatRefresh: 
 //  })
 
+var svg = document.querySelector("button");
 
+button.addEventListener("click", animate);
+
+function animate() {
 
 // Push svg down
 gsap.to('.svg', {
@@ -30,4 +34,5 @@ TweenMax.to('.svg', .9, {
   rotation:360, 
   duration: 3.5,
   transformOrigin:'center' 
-});
+}
+)}; 
