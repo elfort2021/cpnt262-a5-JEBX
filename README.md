@@ -12,7 +12,11 @@ Located in recipegen.ejs for inclusion and code for animation located in js/anim
 Jess- For rallying the team and keeping everybody on track and helping absolutely everyone with questions <br>
 Xia- For being the first to have his code finished and being on top of things <br>
 Boxiang- For finishing up the final details and all the outside missing elements <br>
-Ellie- For a disgusting buttermilk petri dish drawing 
+Ellie- For a disgusting buttermilk petri dish drawing
+
+**Notes**
+- We did not setup a link to the admin page, because of privacy problem. However, it can be accessed by "/admin"
+- The single image can be accessed by "/gallery/id". id should be from 1 to 12.
 
 
 Icon Attribute (Dinner Bell)

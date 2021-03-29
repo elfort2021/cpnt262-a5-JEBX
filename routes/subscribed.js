@@ -17,6 +17,7 @@ router.post('/', (req, res) => {
     if (err) {
       res.send('<p>Problem subscribing! <a href="/">Please try again</a>.</p>')
     }
+    // output the insert data so that they can be showing on the confirm page
     res.render('pages/subscribed', {
       pageTitle: `Subscribed`,
       user: data
