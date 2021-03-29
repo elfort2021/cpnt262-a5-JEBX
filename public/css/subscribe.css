@@ -27,6 +27,7 @@ button {
   text-transform:uppercase;
   letter-spacing:.1em;
   transition:all.5s ease;
+  margin-top: 2rem;
 
   display:block;
   width:100%;
@@ -48,4 +49,25 @@ button:hover{
 .subscribed h1, p {
   text-align: center;
   margin: 0;
+}
+
+.sub-list-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.sub-list {
+  text-align: center;
+}
+
+.sub-list dt {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sub-list dd {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }

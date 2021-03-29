@@ -15,13 +15,12 @@ router.get('/subscribe', (req, res) => {
   res.render('pages/subscribe', {pageTitle: "Subscribe"})
 })
 
-
 router.get('/admin', (req, res) => {
   res.render('pages/admin', {pageTitle: "Subscribers List"})
 })
 
 router.get('/gallery', (req, res) => {
-  res.render('pages/gallery', {pageTitle: "Gallery"})
+  res.render('pages/recipegen', {pageTitle: "Recipe Generator"})
 })
 
 module.exports = router;

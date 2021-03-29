@@ -9,6 +9,9 @@ mongoose.connect(
     console.log('Connected to DB...')
   })
   .catch(function(err){
+    // 505 error handler //
+    err.message = 'Internal Server - Failed to connect to DB...';
+    err.status = 500;
     console.log(err)
   });
   

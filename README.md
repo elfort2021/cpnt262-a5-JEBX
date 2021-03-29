@@ -18,3 +18,8 @@ Ellie- For a disgusting buttermilk petri dish drawing
 Icon Attribute (Dinner Bell)
 https://icon-icons.com/icon/plate-with-rounded-cover/74340#48
 
+<<<<<<< HEAD
+=======
+Welcome Image Attribute:
+https://www.pexels.com/photo/person-standing-near-brown-welcome-on-board-printed-floor-map-128299/
+>>>>>>> 4594ef30bd330410bc5ccb593a113aab641f7c0a

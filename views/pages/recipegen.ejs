@@ -3,8 +3,6 @@
 <head>
   <%- include ("../partials/head") %>
   <script src="js/recipegen.js"></script>
-  <script src="/public/js/animation.js"></script>
-  <title><%= pageTitle %></title>
 </head>
 
 <body>
@@ -20,16 +18,17 @@
     <div class="recipe">
     </div>
 
+
     <div class="svg-container">
       <div class="svg">
-      <%- include ("public/images/plate.svg") %>
       </div>
     </div>
-  
+  <button onclick="outputAll();">Hewwo</button>
+
   </main>
 
   <%- include ("../partials/footer") %>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 </body>
 
